@@ -365,7 +365,7 @@ public class Main extends ApplicationAdapter {
                 z.add(dir.x*zSpeed*dt,dir.y*zSpeed*dt);
                 zombieAngles.set(i, zombieAngles.get(i)+dt);
                 if(Vector2.dst(px,py,z.x,z.y)<pSize+15f) gameOver=true;
-                for(int j=bullets.size()-1;j>=0;j--) {
+                for(int j=bullets.size-1;j>=0;j--) {
                     if(Vector2.dst(bullets.get(j).x,bullets.get(j).y,z.x,z.y)<22f) {
                         zombies.removeIndex(i);zombieAngles.removeIndex(i);
                         bullets.removeIndex(j);bulletDirs.removeIndex(j);score++;break;
