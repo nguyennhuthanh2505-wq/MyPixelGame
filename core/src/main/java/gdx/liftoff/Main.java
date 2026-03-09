@@ -359,7 +359,7 @@ public class Main extends ApplicationAdapter {
             if(spawnTimer>spawnRate){spawnTimer=0;spawnZombie();}
 
             float zSpeed=zombieSpeed+score*1.5f;
-            for (int i=zombies.size()-1;i>=0;i--) {
+            for (int i=zombies.size-1;i>=0;i--) {
                 Vector2 z=zombies.get(i);
                 Vector2 dir=new Vector2(px-z.x,py-z.y).nor();
                 z.add(dir.x*zSpeed*dt,dir.y*zSpeed*dt);
@@ -385,7 +385,7 @@ public class Main extends ApplicationAdapter {
         for(int y=0;y<H;y+=60) shape.rect(0,y,W,2);
 
         // Vẽ zombie
-        for(int i=0;i<zombies.size();i++) {
+        for(int i=0;i<zombies.size;i++) {
             Vector2 z=zombies.get(i);
             drawZombie(z.x, z.y, zombieAngles.get(i));
         }
